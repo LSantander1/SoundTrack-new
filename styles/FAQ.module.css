@@ -1,0 +1,42 @@
+.page {
+    padding: 30px;
+}
+
+.hr {
+    display: flex;
+    justify-content: center;
+}
+
+.page hr {
+    margin: 25px;
+    border: 1px solid rgb(66, 66, 66);
+    width: 100%;
+}
+
+/*                  HEADER                */
+.header {
+    text-align: center;
+    font-size: 22.5px;
+}
+
+/*                  BODY                */
+.content {
+    background-color: rgb(40, 40, 40);
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    color: #6e6e6e;
+    margin-bottom: 10px;
+}
+
+.content h1 a {
+    color: #02b2d4;
+}
+
+/*                  FOOTER                */
+.footer {
+    text-align: center;
+}

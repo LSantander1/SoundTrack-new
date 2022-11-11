@@ -1,0 +1,21 @@
+/*      primeira geração de smartphones em modo retrato        */
+@media screen and (min-width: 480px) {
+    .page {
+        background-color: red;
+    }
+}
+
+/*      maioria dos tablets e smartphones de segunda geração        */
+@media screen and (min-width: 768px) {
+    .page {
+        background-color: rgb(17, 255, 0);
+    }
+}
+
+/*      Notebooks, desktops e televisores        */
+@media screen and (max-width: 769px) {
+    .page {
+        background-color: rgb(0, 119, 255);
+    }
+}
+

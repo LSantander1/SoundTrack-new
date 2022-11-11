@@ -1,0 +1,100 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: rgba(44, 44, 44);
+    border-radius: 20px;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin-top: 30vh;
+    text-align: center;
+}
+
+.form a {
+    margin: 5px;
+}
+
+.form hr {
+    margin: 10px;
+    width: 90%;
+    border: 1px solid rgb(111, 111, 111);
+}
+
+.google {
+    background-color: #02b2d4;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.google a {
+    margin: 10px;
+}
+
+.google:hover {
+    background-color: #038eaf;
+}
+
+.embreve {
+    color: rgb(127, 127, 127);
+}
+
+.alert {
+    background-color: rgb(147, 147, 0);
+    border: 2px solid rgb(255, 255, 0);
+    padding: 7.5px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    .form {
+        width: 250px;
+    }
+
+    .google a {
+        font-size: 15px;
+    }
+
+    .form img {
+        width: 35px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 470px) {
+    .form {
+        background-color: rgba(44, 44, 44);
+        border-radius: 20px;
+        width: 300px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 10px;
+        margin-top: 30vh;
+        text-align: center;
+    }
+
+    .google a {
+        font-size: 20px;
+    }
+}

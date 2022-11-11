@@ -1,0 +1,21 @@
+.container {
+    min-height: 100vh;
+}
+
+.listPlayButton {
+    position: fixed;
+    margin-top: 10px;
+    left: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    opacity: 70%;
+    z-index: 3;
+}
+
+.listPlayButton:hover {
+    opacity: 100%;
+}
+
+.spaceNavbar {
+    height: 80px;
+}

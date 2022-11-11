@@ -1,0 +1,181 @@
+.page * {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-color: rgb(40, 40, 40);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+#icon {
+    font-size: 25px;
+}
+
+.atualMusicAuthor {
+    color: #5d5d5d;
+    margin-top: 5px;
+}
+
+
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 85%;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: rgb(66, 66, 66);
+    border-radius: 10px;
+}
+
+.card:hover #trash {
+    display: block;
+}
+
+.cardFirst {
+    border: 3px solid #026b8c;
+    background-color: #004a6a46;
+    border-radius: 15px;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 85%;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cardFirst:hover {
+    background-color: rgb(66, 66, 66);
+    border-radius: 15px;
+}
+
+.cardFirst:hover #trash {
+    display: block;
+}
+
+.place {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#cardCapa {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+#cardCapaFirst {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+    opacity: 40%;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.cardTime {
+    font-size: 19px;
+    display: flex;
+    justify-content: end;
+
+    display: flex;
+    align-items: center;
+}
+
+.cardTime {
+    padding: 20px;
+}
+
+#trash {
+    margin-right: 15px;
+    display: none;
+    width: 30px;
+}
+
+#trashFirst {
+    display: none;
+}
+
+#trash:hover {
+    background-color: rgb(65, 0, 0);
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.cardAuthor {
+    color: #6e6e6e;
+    font-size: 16px;
+}
+
+.divisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nenhuma {
+    color: rgb(109, 109, 109);
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgba(40, 40, 40, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    color: rgb(165, 165, 165);
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgba(83, 83, 83, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxRelatedMusic:checked {
+    
+}

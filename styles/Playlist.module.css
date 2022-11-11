@@ -1,0 +1,298 @@
+.body {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head {
+    background-color: rgb(40, 40, 40);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 10px;
+    flex-direction: row;
+    justify-content: start;
+    width: 80%;
+}
+
+.playlistAuthor {
+    color: #02b2d4;
+    text-decoration: none;
+}
+
+.playlistAuthor:hover {
+    color: #3eccea;
+}
+
+.head h3 {
+    color: rgb(110, 110, 110);
+}
+
+.body h1 {
+    margin: 15px;
+}
+
+.capa {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+    width: 180px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    text-align: center;
+}
+
+.infoName {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.infoAuthor {
+    margin-bottom: 10px;
+}
+
+.infoCount {
+    margin-bottom: 10px;
+}
+
+.infoCount div h3 {
+    margin-bottom: 5px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 85%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgb(66, 66, 66);
+    border-radius: 10px;
+}
+
+.place {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#cardCapa {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+    width: 65px;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cardTime {
+    font-size: 19px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardTime {
+    padding: 20px;
+}
+
+.cardAuthor {
+    color: #6e6e6e;
+    font-size: 16px;
+}
+
+.divisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nenhuma {
+    color: rgb(109, 109, 109);
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgba(40, 40, 40, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    color: rgb(165, 165, 165);
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgba(83, 83, 83, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingCount {
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: rgba(83, 83, 83, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vazio {
+    color: rgb(109, 109, 109);
+    font-size: 25px;
+}
+
+.buttonPlay {
+    background-color: #02b2d4;
+    color: rgb(40, 40, 40);
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.buttonPlay a {
+    margin-left: 5px;
+}
+
+.buttonPlay:hover {
+    background-color: #038eaf;
+}
+
+@media (min-width: 0px) and (max-width: 287px) {
+    .infoName {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .capa {
+        width: 100px;
+    }
+
+    .head {
+        border-radius: 0px;
+        flex-direction: column;
+        width: 45vh;
+        font-size: 11px;
+    }
+
+    .infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardName {
+        font-size: 14px;
+        width: 22vh;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cardAuthor {
+        font-size: 12px;
+    }
+
+    #cardCapa {
+        display: none;
+    }
+
+    .card {
+        width: 28vh;
+        margin-top: 5px;
+    }
+
+    .card:hover {
+        border-radius: 0px;
+        width: 45vh;
+    }
+
+    .place:hover {
+        justify-content: end;
+    }
+
+}
+
+@media (min-width: 288px) and (max-width: 699px) {
+    .infoName {
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+
+    .capa {
+        width: 100px;
+    }
+
+    .head {
+        border-radius: 0px;
+        flex-direction: column;
+        width: 45vh;
+        font-size: 11px;
+        border-radius: 15px;
+    }
+
+    .infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .cardName {
+        font-size: 15px;
+        width: 22vh;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cardAuthor {
+        font-size: 14px;
+    }
+
+    #cardCapa {
+        width: 60px;
+    }
+
+    .card {
+        margin-top: 5px;
+    }
+
+    .card:hover {
+        width: 340px;
+    }
+
+}

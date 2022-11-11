@@ -1,0 +1,460 @@
+.body {
+    padding: 50px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.titlePL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px;
+}
+
+.cima {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.baixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.titlePlan {
+    font-size: 40px;
+}
+
+.valorPlan {
+    font-size: 30px;
+}
+
+.picture {
+    border-radius: 30px;
+}
+
+.place div {
+    margin-left: 10px;
+}
+
+.playlists {
+
+}
+
+.playlist {
+    padding: 2.5px;
+    border-radius: 10px;
+    margin: 10px;
+
+    display: flex;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.playlist:hover {
+    background-color: rgb(63, 63, 63);
+    transition: .2s;
+}
+
+.capa {
+    border-radius: 10px;
+    border: 2px solid #004a58;
+}
+
+.infosPlaylist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 10px;
+}
+
+.namePL {
+    font-size: 20px;
+}
+
+.countMusics {
+    font-size: 15px;
+    color: rgb(139, 139, 139);
+}
+
+.ads {
+    background-color: red;
+}
+
+.addPlaylist {
+    background-color: rgb(40, 40, 40);
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.addPlaylist:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.mais {
+    font-size: 40px;
+    margin-right: 5px;
+}
+
+.card {
+    width: 100%;
+}
+
+.playlists {
+    background-color: red;
+}
+
+---------------------------
+
+.body {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head {
+    background-color: rgb(40, 40, 40);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 10px;
+    flex-direction: row;
+    justify-content: start;
+    min-width: 80%;
+}
+
+.head a {
+    color: #02b2d4;
+    text-decoration: none;
+}
+
+.head h3 {
+    color: rgb(110, 110, 110);
+}
+
+.body h1 {
+    margin: 15px;
+}
+
+.capa {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.infoName {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.infoAuthor {
+    margin-bottom: 10px;
+}
+
+.infoCount {
+    margin-bottom: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 100%;
+    margin: 5px;
+    cursor: pointer;
+    background-color: rgb(19, 19, 19);
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-color: rgb(66, 66, 66);
+    border-radius: 10px;
+}
+
+.place {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#cardCapa {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cardTime {
+    font-size: 19px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardTime {
+    padding: 20px;
+}
+
+.cardAuthor {
+    color: rgb(110, 110, 110);
+    font-size: 16px;
+}
+
+.divisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nenhuma {
+    color: rgb(109, 109, 109);
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgba(40, 40, 40, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    color: rgb(165, 165, 165);
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgba(83, 83, 83, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingCount {
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: rgba(83, 83, 83, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vazio {
+    color: rgb(109, 109, 109);
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .head {
+        background-color: rgb(40, 40, 40);
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        margin: 10px;
+        flex-direction: column;
+        justify-content: start;
+        min-width: 80%;
+    }
+    
+    .head a {
+        color: #02b2d4;
+        text-decoration: none;
+    }
+    
+    .head h3 {
+        color: rgb(110, 110, 110);
+    }
+    
+    .body h1 {
+        margin: 15px;
+    }
+    
+    .capa {
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: 0% 50%;
+    }
+    
+    .infos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px;
+    }
+    
+    .infoName {
+        font-size: 35px;
+        margin-bottom: 30px;
+        margin-top: -15px;
+        text-align: center;
+    }
+    
+    .infoAuthor {
+        margin-bottom: 10px;
+    }
+    
+    .infoCount {
+        margin-bottom: 10px;
+    }
+
+    .picture {
+        border-radius: 30px;
+    }
+    
+    .card {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        min-width: 100%;
+        margin: 5px;
+        cursor: pointer;
+        background-color: rgb(19, 19, 19);
+        border-radius: 10px;
+    }
+    
+    .card:hover {
+        background-color: rgb(66, 66, 66);
+        border-radius: 10px;
+    }
+    
+    .place {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        border-radius: 10px;
+        width: 100%;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    
+    #cardCapa {
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: 0% 50%;
+    }
+    
+    .cardText {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    
+    .cardTime {
+        font-size: 19px;
+        display: flex;
+        justify-content: end;
+    }
+    
+    .cardTime {
+        padding: 20px;
+    }
+    
+    .cardAuthor {
+        color: rgb(110, 110, 110);
+        font-size: 16px;
+    }
+    
+    .divisor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nenhuma {
+        color: rgb(109, 109, 109);
+        font-size: 20px;
+        margin-top: 10px;
+        background-color: rgba(40, 40, 40, 0.452);
+        padding: 5px;
+        border-radius: 5px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .loading {
+        color: rgb(165, 165, 165);
+        font-size: 20px;
+        margin-top: 10px;
+        background-color: rgba(83, 83, 83, 0.452);
+        padding: 5px;
+        border-radius: 5px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .loadingCount {
+        color: rgb(165, 165, 165);
+        font-size: 15px;
+        margin-top: 10px;
+        background-color: rgba(83, 83, 83, 0.452);
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .vazio {
+        color: rgb(109, 109, 109);
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 10000px) {
+    .head {
+        width: 100%;
+    }
+}

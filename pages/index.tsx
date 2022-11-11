@@ -1,251 +1,209 @@
+import styles from '../styles/Home.module.css'
 import Head from 'next/head'
-import clientPromise from '../lib/mongodb'
-import { InferGetServerSidePropsType } from 'next'
+import Link from 'next/link'
+import { resolve } from 'styled-jsx/css'
+import { useSession } from 'next-auth/react'
+//import conectar from '../utils/database'
 
-export async function getServerSideProps(context) {
-  try {
-    await clientPromise
-    // `await clientPromise` will use the default database passed in the MONGODB_URI
-    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
-    //
-    // `const client = await clientPromise`
-    // `const db = client.db("myDatabase")`
-    //
-    // Then you can execute queries against your database like so:
-    // db.find({}) or any of the MongoDB Node Driver commands
+const shortNum = require('number-shortener')
 
-    return {
-      props: { isConnected: true },
+import Skeleton from "react-loading-skeleton";
+import { useEffect, useState } from 'react'
+//import 'react-loading-skeleton/dist/skeleton.css'
+
+//import Skeleton from "react-loading-skeleton"
+
+export default function Home({ dados, props }) {
+
+    var topInter = dados.TopInter
+    var topBrasil = dados.TopBrasil
+    var topLatino = dados.TopLatino
+
+    var musica
+
+    {
+        /*
+        dados.TopInter.map((musica) => {
+            (<Link href={`/musics/${musica.id}`}>
+            <div className={styles.card}>
+                <img src={musica.snippet.thumbnails.medium.url} width='163px' className={styles.img}></img>
+                <a title={topInter[0].snippet.title} className={styles.titleMusic}>{musica.snippet.title}</a>
+                <div className={styles.infosMusic}>
+                    <div><i class="fas fa-solid fa-user"></i> <a title={topInter[1].snippet.channelTitle} className={styles.autor}>{musica.snippet.channelTitle}</a></div>
+                    <div><i class="fas fa-solid fa-clock"></i> <a>{musica.time}</a></div>
+                    <div><i class="fas fa-solid fa-heart"></i> <a>{musica.likes}</a></div>
+                </div>
+            </div>
+        </Link>)
+        })*/
     }
-  } catch (e) {
-    console.error(e)
-    return {
-      props: { isConnected: false },
-    }
-  }
-}
 
-export default function Home({
-  isConnected,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    //   <!-- [5 músicas em alta internacional] [5 músicas em alta BR] [10 músicas lançamento internacinal] [10 músicas lançamento br] -|- [5 músicas dos artistas das 3 mus em alta internacional] [5 músicas dos artistas das 3 mus em alta br] ====== -->
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
-        </h1>
 
-        {isConnected ? (
-          <h2 className="subtitle">You are connected to MongoDB</h2>
-        ) : (
-          <h2 className="subtitle">
-            You are NOT connected to MongoDB. Check the <code>README.md</code>{' '}
-            for instructions.
-          </h2>
-        )}
+    return (<>
+        <Head>
+            <title>Página Inicial - SoundTrack</title>
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+        </Head>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <div className={styles.apresentacao}>
+            <img src='images/logo-st-icon-branco.png'></img>
+            <h1>SoundTrack</h1>
+            <a className={styles.part1}>Bem vindo ao <b>SoundTrack</b>, sua mais nova plataforma de Streaming Musical</a>
+            <a className={styles.part2}>Qualquer dúvida, acompanhe a nossa breve apresentação do aplicativo</a>
+            <Link href="/faq/welcome">
+                <a className={styles.conhecerBtn}>Ver apresentação</a>
+            </Link>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
-      </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+        <div className={styles.page}>
+            <Skeleton duration={1} height={30} width={300} />
+            <h1>Populares Internacional</h1>
+            <div className={styles.packMusics}>
+                {
+                    dados.TopInter.map((music) => (
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                        <Link href={`/musics/${music.id}&origin=Home`}>
+                            <div className={styles.card}>
+                                <img src={music.snippet.thumbnails.medium.url} width='163px' className={styles.img}></img>
+                                <a title={music.snippet.title} className={styles.titleMusic}>{music.titulo || <Skeleton/>}</a>
+                                <div className={styles.infosMusic}>
+                                    <div><i class="fas fa-solid fa-user"></i> <a title={music.snippet.channelTitle} className={styles.autor}>{music.snippet.channelTitle || <Skeleton/>}</a></div>
+                                    <div><i class="fas fa-solid fa-clock"></i> <a>{music.time  || <Skeleton/>}</a></div>
+                                    <div><i class="fas fa-solid fa-heart"></i> <a>{music.likes  || <Skeleton/>}</a></div>
+                                </div>
+                            </div>
+                        </Link>
+                    ))
+                }
+            </div>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+            <h1>Populares Brasil</h1>
+            <div className={styles.packMusics}>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+                {
+                    dados.TopBrasil.map((music) => (
+                        <Link href={`/musics/${music.id}&origin=Home`}>
+                            <div className={styles.card}>
+                                <img src={music.snippet.thumbnails.medium.url} width='163px' className={styles.img}></img>
+                                <a title={music.snippet.title} className={styles.titleMusic}>{music.titulo}</a>
+                                <div className={styles.infosMusic}>
+                                    <div><i class="fas fa-solid fa-user"></i> <a title={music.snippet.channelTitle} className={styles.autor}>{music.snippet.channelTitle}</a></div>
+                                    <div><i class="fas fa-solid fa-clock"></i> <a>{music.time}</a></div>
+                                    <div><i class="fas fa-solid fa-heart"></i> <a>{music.likes}</a></div>
+                                </div>
+                            </div>
+                        </Link>
+                    ))
+                }
+            </div>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
+            <h1>Populares Latino</h1>
+            <div className={styles.packMusics}>
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+                {
+                    dados.TopLatino.map((music) => (
+                        <Link href={`/musics/${music.id}&origin=Home`}>
+                            <div className={styles.card}>
+                                <img src={music.snippet.thumbnails.medium.url} width='163px' className={styles.img}></img>
+                                <a title={music.snippet.title} className={styles.titleMusic}>{music.titulo}</a>
+                                <div className={styles.infosMusic}>
+                                    <div><i className="fas fa-solid fa-user"></i> <a title={music.snippet.channelTitle} className={styles.autor}>{music.snippet.channelTitle}</a></div>
+                                    <div><i className="fas fa-solid fa-clock"></i> <a>{music.time}</a></div>
+                                    <div><i className="fas fa-solid fa-heart"></i> <a>{music.likes}</a></div>
+                                </div>
+                            </div>
+                        </Link>
+                    ))
+                }
+            </div>
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+        </div>
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .subtitle {
-          font-size: 2rem;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+    </>)
 }
+
+export async function getStaticProps() {
+
+    await new Promise((resolve) => {
+        setTimeout(resolve, 500)
+    })
+
+
+
+    let dados = {
+        TopInter: [],
+        TopBrasil: [],
+        TopLatino: []
+    }
+
+    // Top Internacional - 5
+    var dataFetch = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&part=contentDetails&chart=mostPopular&maxResults=20&regionCode=us&videoCategoryId=10&fields=items(id%2Csnippet(thumbnails%2Ctitle%2CchannelTitle)%2CcontentDetails(duration)%2Cstatistics(likeCount))&key=AIzaSyBt6QUXTgALK-r0THl-pbE09oFFdfCvwU4")
+    var dataJson = await dataFetch.json()
+    var dataItems = await dataJson.items
+    dataItems.map(music => {
+        let temp = music.contentDetails.duration.replace('PT', '').replace('M', ':').replace('S', '')
+        if (temp.endsWith(':')) temp = temp + '00'
+        if (!music.contentDetails.duration.includes('M')) temp = '0:' + temp
+        music.time = temp
+
+        var likesCount = shortNum(music.statistics.likeCount).replace('+', "")
+        music.likes = likesCount
+
+        var autor = music.snippet.channelTitle;
+        var title = music.snippet.title.replace(autor, "");
+        music.titulo = title
+
+        dados.TopInter.push(music)
+    })
+
+    // Top Brasil - 5
+    var dataFetch = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&part=contentDetails&chart=mostPopular&maxResults=20&regionCode=br&videoCategoryId=10&fields=items(id%2Csnippet(thumbnails%2Ctitle%2CchannelTitle)%2CcontentDetails(duration)%2Cstatistics(likeCount))&key=AIzaSyBt6QUXTgALK-r0THl-pbE09oFFdfCvwU4") // (thumbnails%2Ctitle%2CchannelTitle)%2CcontentDetails(duration)%2Cstatistics(likeCount)
+    var dataJson = await dataFetch.json()
+    var dataItems = await dataJson.items
+    dataItems.map(music => {
+        let temp = music.contentDetails.duration.replace('PT', '').replace('M', ':').replace('S', '')
+        if (temp.endsWith(':')) temp = temp + '00'
+        if (!music.contentDetails.duration.includes('M')) temp = '0:' + temp
+        music.time = temp
+
+        var likesCount = shortNum(music.statistics.likeCount).replace('+', "")
+        music.likes = likesCount
+
+        var autor = music.snippet.channelTitle;
+        var title = music.snippet.title.replace(autor, "");
+        music.titulo = title
+
+        dados.TopBrasil.push(music)
+    })
+
+    // Top Latino - 5
+    var dataFetch = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&part=contentDetails&chart=mostPopular&maxResults=20&regionCode=es&videoCategoryId=10&fields=items(id%2Csnippet(thumbnails%2Ctitle%2CchannelTitle)%2CcontentDetails(duration)%2Cstatistics(likeCount))&key=AIzaSyBt6QUXTgALK-r0THl-pbE09oFFdfCvwU4") // (thumbnails%2Ctitle%2CchannelTitle)%2CcontentDetails(duration)%2Cstatistics(likeCount)
+    var dataJson = await dataFetch.json()
+    var dataItems = await dataJson.items
+    dataItems.map(music => {
+        let temp = music.contentDetails.duration.replace('PT', '').replace('M', ':').replace('S', '')
+        if (temp.endsWith(':')) temp = temp + '00'
+        if (!music.contentDetails.duration.includes('M')) temp = '0:' + temp
+        music.time = temp
+
+        var likesCount = shortNum(music.statistics.likeCount).replace('+', "")
+        music.likes = likesCount
+
+        var autor = music.snippet.channelTitle;
+        var title = music.snippet.title.replace(autor, "");
+        music.titulo = title
+
+        dados.TopLatino.push(music)
+    })
+
+    return { props: { dados } }
+}
+
+
+//-----------------
+
+

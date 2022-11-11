@@ -1,0 +1,206 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+/*________________________________________*/
+/*                  HEADER                */
+
+.header {
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+}
+
+.header a {
+    color: rgb(114, 114, 114);
+}
+
+.header b {
+    color: #3eccea;
+}
+
+.header h2 {
+    margin: 10px;
+    text-align: center;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter .filterName {
+    color: #02b2d4;
+    text-decoration: none;
+}
+
+.filter .filterName:hover {
+    color: #6fddf1;
+    text-decoration: none;
+}
+
+/*________________________________________*/
+/*                   BODY                 */
+
+.body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.tag {
+    margin-bottom: 50px;
+}
+
+.result {
+    padding: 7.5px;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+.text {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+}
+
+.text a {
+    display: flex;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.author {
+    font-size: 20px;
+    color: rgb(114, 114, 114);
+}
+
+#img {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+/*________________________________________*/
+/*                  FOOTER                */
+
+.vazio {
+    color: rgb(109, 109, 109);
+    font-size: 25px;
+}
+
+/*________________________________________*/
+/*                   ERRO                 */
+
+.erro {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9b9000;
+    border: 3px solid #ffee00;
+    border-radius: 10px;
+}
+
+.msgErro {
+    margin: 10px;
+    color: #3b3700;
+}
+
+.codeArea {
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #645e00;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.codeArea div {
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+}
+
+.codeArea h3 {
+    color: #383400;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.codeArea a {
+    font-size: 20px;
+    color: #e4d500;
+}
+
+.erroSuport {
+    margin: 15px;
+    color: #3b3700;
+    font-size: 17.5px;
+}
+
+
+
+/*________________________________________*/
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .text a {
+        font-size: 18px;
+    }
+
+    .header a, .header b {
+        font-size: 22px;
+    }
+
+    .result {
+        display: flex;
+        width: 350px;
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    .text a {
+        font-size: 17px;
+    }
+
+    .header a, .header b {
+        font-size: 20px;
+    }
+
+    .header {
+        width: 64vh;
+        border-radius: 0px;
+    }
+
+    .result {
+        display: flex;
+        width: 360px;
+        margin-left: 90px;
+    }
+}

@@ -1,0 +1,136 @@
+.body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 270px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: rgb(44, 44, 44);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 10px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card p {
+    margin: 8px;
+    font-size: 17px;
+}
+
+.card .oldValor {
+    text-decoration: line-through;
+    color: rgba(170, 170, 170, 0.634);
+}
+
+.card .newValor {
+    font-size: 27px;
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #02b2d4;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #038eaf;
+}
+
+.title {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    background-color: #FFF3CD;
+    border: 3px solid #dda900;
+
+    padding: 10px;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.alert a, .alert h3 {
+    color: #8f6d00;
+    margin-bottom: 7px;
+}
+
+.body hr {
+    width: 900px;
+    margin: 30px;
+}
+
+.bestPrice {
+    background-color: #6fddf1;
+    border-radius: 15px;
+    padding: 0px;
+    width: 310px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bestText {
+    margin-left: 15px;
+    color: #004d5c;
+    text-align: start;
+}
+
+#bestPrice {
+    margin: 4px;
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        width: 270px;
+    }
+
+    .button {
+        width: 250px;
+    }
+
+    .bestPrice {
+        width: 280px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 660px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

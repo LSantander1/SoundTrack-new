@@ -1,0 +1,29 @@
+{
+    "images": {
+        "music": "https://imgur.com/fgV6YNs.png",
+        "playlist": "https://imgur.com/ZAPWF8I.png",
+        "user": "https://imgur.com/V2TbKOv.png"
+    },
+    "colors": {
+        "primary": {
+            "1": "#004b6a",
+            "2": "#026b8c",
+            "3": "#038eaf",
+            "4": "#02b2d4",
+            "5": "#3eccea",
+            "6": "#6fddf1",
+            "7": "#94eef8",
+            "8": "#b4ffff"
+        },
+        "secundary": {
+            "1": "#282828",
+            "2": "#6e6e6e",
+            "3": "",
+            "4": "",
+            "5": ""
+        },
+        "names": {
+            "author": "#5d5d5d"
+        }
+    }
+}

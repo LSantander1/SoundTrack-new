@@ -1,0 +1,131 @@
+.modalBackground {
+    width: 100%;
+    height: 1000%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.modalContainer {
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    background-color: rgb(40, 40, 40);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-bottom: 30%;
+}
+
+.x {
+    background-color: rgb(65, 65, 65);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.x:hover {
+    background-color: rgb(82, 82, 82);
+}
+
+.camp {
+    display: flex;
+    justify-content: end;
+}
+
+.title {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.modalContainer .title {
+    display: flex;
+    text-align: center;
+    margin: 10px;
+}
+
+.modalContainer .body {
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.card {
+    background-color: rgb(56, 56, 56);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.card:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.cardName {
+    
+}
+
+.addPlaylist {
+    background-color: rgb(65, 65, 65);
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addPlaylist:hover {
+    background-color: rgb(82, 82, 82);
+}
+
+.mais {
+    font-size: 40px;
+    margin-right: 5px;
+}
+
+.vazio {
+    color: rgb(109, 109, 109);
+}
+
+.modalContainer hr {
+    border-color: rgb(109, 109, 109);
+}
+
+.confirm {
+    background-color: rgb(107, 255, 102);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #036100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmTEXT {
+    color: rgb(3, 97, 0);
+    margin-left: 7.5px;
+}

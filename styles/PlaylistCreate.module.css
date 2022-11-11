@@ -1,0 +1,85 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: rgb(40, 40, 40);
+    padding: 20px;
+    margin: 150px;
+    border-radius: 10px;
+    min-width: 700px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleField {
+    font-size: 25px;
+}
+
+.titleFieldCapa {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.textField {
+    margin-top: 10px;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sendFile {
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #02b2d4;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnDiv {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnDiv a {
+    width: 50%;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #038eaf;
+}
+
+.alert {
+    color: rgb(255, 136, 136);
+    
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+    .form {
+        min-width: 500px;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 500px) {
+    .form {
+        min-width: 300px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 250px) {
+    .form {
+        min-width: 230px;
+    }
+}

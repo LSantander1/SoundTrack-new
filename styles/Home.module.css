@@ -1,0 +1,509 @@
+.page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.card {
+    background-color: rgb(44, 44, 44);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+
+    height: 235px;
+    width: 185px;
+
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+.packMusics {
+    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 260px;
+}
+
+.page h1 {
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.titleMusic {
+    font-size: 20px;
+
+    display: flex;
+    text-decoration: none;
+
+    max-width: 17ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.autor {
+    display: flex;
+
+    max-width: 16ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.infosMusic div {
+    margin: 7px;
+}
+
+.infosMusic a {
+    color: #8f8f8f;
+    font-weight: bolder;
+}
+
+.img {
+    border-radius: 20px;
+    border: 2px solid #646464;
+}
+
+.apresentacao {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, #02b2d4 0, #02b2d4 12.5%, #02b2d4 25%, #02b2d4 37.5%, #02b1d4d9 50%, #02b1d4c2 62.5%, #02b1d4a3 75%, #02b1d453 87.5%, #02b1d400 100%);
+}
+
+.apresentacao img {
+    margin-top: 30px;
+    width: 190px;
+}
+
+.apresentacao h1 {
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+.part1 {
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.part1 b {
+    color: #7ae9ff;
+}
+
+.part2 {
+    margin-top: 5px;
+    font-size: 22.5px;
+    color: rgb(187, 187, 187);
+}
+
+.conhecerBtn {
+    margin-top: 20px;
+    background-color: #02b2d4;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+    margin-bottom: 60px;
+}
+
+.conhecerBtn:hover {
+    background-color: #3eccea;
+}
+
+@media (min-width: 1700px) {
+
+
+    .packMusics {
+        display: flex;
+    
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 305px;
+    }
+
+    .card {
+        background-color: rgb(44, 44, 44);
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+    
+        /*
+            height: 235px;
+            width: 185px;
+        */
+
+        height: 290px;
+        width: 320px;
+    
+        cursor: pointer;
+    }
+
+    .page h1 {
+        font-size: 50px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .titleMusic {
+        font-size: 20px;
+    
+        display: flex;
+        text-decoration: none;
+    
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .autor {
+        display: flex;
+    
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .infosMusic div {
+        margin: 7px;
+        display: flex;
+    }
+
+    .infosMusic div a {
+        margin-left: 7.5px;
+    }
+    
+    .img {
+        width: 300px;
+        border-radius: 20px;
+        border: 2px solid #646464;
+    }
+}
+
+@media (min-width: 1350px) and (max-width: 1700px) {
+    .page {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .packMusics {
+        display: flex;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 305px;
+    }
+
+    .card {
+        background-color: rgb(44, 44, 44);
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+    
+        /*
+            height: 235px;
+            width: 185px;
+        */
+
+        height: 290px;
+        width: 320px;
+    
+        cursor: pointer;
+    }
+
+    .page h1 {
+        font-size: 50px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .titleMusic {
+        font-size: 20px;
+    
+        display: flex;
+        text-decoration: none;
+    
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .autor {
+        display: flex;
+    
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .infosMusic div {
+        margin: 7px;
+        display: flex;
+    }
+
+    .infosMusic div a {
+        margin-left: 7.5px;
+    }
+    
+    .img {
+        width: 300px;
+        border-radius: 20px;
+        border: 2px solid #646464;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1350px) {
+    .page {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .packMusics {
+        display: flex;
+    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 305px;
+    }
+
+    .card {
+        background-color: rgb(44, 44, 44);
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+    
+        /*
+            height: 235px;
+            width: 185px;
+        */
+
+        height: 290px;
+        width: 320px;
+    
+        cursor: pointer;
+    }
+
+    .page h1 {
+        font-size: 50px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .titleMusic {
+        font-size: 20px;
+    
+        display: flex;
+        text-decoration: none;
+    
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .autor {
+        display: flex;
+    
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .infosMusic div {
+        margin: 7px;
+        display: flex;
+    }
+
+    .infosMusic div a {
+        margin-left: 7.5px;
+    }
+    
+    .img {
+        width: 300px;
+        border-radius: 20px;
+        border: 2px solid #646464;
+    }
+}
+
+@media (min-width: 680px) and (max-width: 1000px) {
+    .page {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .packMusics {
+        display: flex;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 305px;
+    }
+
+    .card {
+        background-color: rgb(44, 44, 44);
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+    
+        /*
+            height: 235px;
+            width: 185px;
+        */
+
+        height: 290px;
+        width: 320px;
+    
+        cursor: pointer;
+    }
+
+    .page h1 {
+        font-size: 50px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .titleMusic {
+        font-size: 20px;
+    
+        display: flex;
+        text-decoration: none;
+    
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .autor {
+        display: flex;
+    
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .infosMusic div {
+        margin: 7px;
+        display: flex;
+    }
+
+    .infosMusic div a {
+        margin-left: 7.5px;
+    }
+    
+    .img {
+        width: 300px;
+        border-radius: 20px;
+        border: 2px solid #646464;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 680px) {
+    .page {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .packMusics {
+        display: flex;
+    
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 305px;
+    }
+
+    .card {
+        background-color: rgb(44, 44, 44);
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 100px;
+        border-radius: 10px;
+    
+        /*
+            height: 235px;
+            width: 185px;
+        */
+
+        height: 290px;
+        width: 320px;
+    
+        cursor: pointer;
+    }
+
+    .page h1 {
+        font-size: 50px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .titleMusic {
+        font-size: 20px;
+    
+        display: flex;
+        text-decoration: none;
+    
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .autor {
+        display: flex;
+    
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .infosMusic div {
+        margin: 7px;
+        display: flex;
+    }
+
+    .infosMusic div a {
+        margin-left: 7.5px;
+    }
+    
+    .img {
+        width: 300px;
+        border-radius: 20px;
+        border: 2px solid #646464;
+    }
+}
